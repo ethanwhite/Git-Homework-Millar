@@ -17,4 +17,10 @@ get_gc_content <- function(sequence){
   
 }
 
+get_ear_length <- function(seq){
+   #Calculate the GC-content for one or more sequences
+   ear_lengths <- ifelse(seq > 10, "large", "small")
+   return(ear_lengths)
+}
+
 get_gc_content(ear_length_dat$dnaseq)
